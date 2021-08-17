@@ -1,0 +1,8 @@
+{
+  "name": "update-playlist",
+  "packageManager": "yarn@3.0.1",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ]
+}
