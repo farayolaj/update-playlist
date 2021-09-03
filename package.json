@@ -1,8 +1,21 @@
 {
   "name": "update-playlist",
-  "packageManager": "yarn@3.0.1",
   "private": true,
-  "workspaces": [
-    "packages/*"
-  ]
+  "devDependencies": {
+    "lerna": "^4.0.0",
+    "lerna-wizard": "^1.1.1"
+  },
+  "scripts": {
+    "postinstall": "lerna bootstrap",
+    "dev": "lerna run --stream dev",
+    "build": "lerna run --stream build",
+    "start": "lerna run --stream start",
+    "dev:server": "lerna run --stream --scope @upplay/server dev",
+    "dev:client": "lerna run --stream --scope @upplay/client dev",
+    "build:server": "lerna run --stream --scope @upplay/server start",
+    "build:client": "lerna run --stream --scope @upplay/client start",
+    "start:server": "lerna run --stream --scope @upplay/server start",
+    "start:client": "lerna run --stream --scope @upplay/client start",
+    "lint": "lerna run --stream lint"
+  }
 }
