@@ -1,0 +1,88 @@
+type Query {
+  getCwd: CWD!
+}
+
+type Mutation {
+  """
+  Change into dir (absolute or relative).
+  If no dir is given, it goes to HOME directory
+  """
+  cd(dir: String): CWD!
+  """
+  Search for metadata for selected files.
+  """
+  metaSearch(files: [String!]!): String!
+}
+
+type Subscription {
+  """
+  The latest result in the ongoing search.
+  """
+  newSearchResult: SearchResult!
+  """
+  The latest result in the ongoing update.
+  """
+  update(selection: SelectionInput!): UpdateResult!
+  """
+  The current working directory and its contents.
+  """
+  newCwd: CWD!
+}
+
+input SelectionInput {
+  file: String!
+  """
+  The title of the selected SongMeta
+  """
+  meta: String!
+}
+
+type CWD {
+  cwd: String!
+  children: [Dirent!]!
+}
+
+interface Dirent {
+  cwd: String!
+  name: String!
+}
+
+type Directory implements Dirent {
+  cwd: String!
+  name: String!
+}
+
+type File implements Dirent {
+  cwd: String!
+  name: String!
+  size: Int!
+}
+
+type SearchResult {
+  file: String!
+  matches: [SongMeta!]!
+  progress: Int!
+  total: Int!
+}
+
+type SongMeta {
+  title: String!
+  artist: String!
+  album: String
+  year: String
+  albumArtist: String
+  genre: String
+  disk: Int
+  track: Int
+}
+
+type UpdateResult {
+  """
+  Total number of song metainfo to update
+  """
+  total: Int!
+  """
+  Number of songs with updated metainfo
+  """
+  progress: Int!
+}

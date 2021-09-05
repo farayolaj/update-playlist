@@ -1,1 +1,0 @@
-declare module '@upplay/mp3-cutter';

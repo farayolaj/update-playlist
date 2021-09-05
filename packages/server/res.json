@@ -1,0 +1,64 @@
+{
+  "status": {
+    "msg": "Success",
+    "code": 0,
+    "version": "1.0"
+  },
+  "metadata": {
+    "music": [
+      {
+        "external_ids": {},
+        "label": "Two Steps from Hell",
+        "duration_ms": 275780,
+        "score": 100,
+        "release_date": "2010-05-03",
+        "play_offset_ms": 24480,
+        "external_metadata": {},
+        "album": {
+          "name": "Invincible"
+        },
+        "title": "To Glory",
+        "acrid": "bb3b721f39054e89670faaedce27c433",
+        "genres": [
+          {
+            "name": "Pop"
+          }
+        ],
+        "result_from": 1,
+        "artists": [
+          {
+            "name": "Thomas Bergersen, Two Steps From Hell"
+          }
+        ]
+      },
+      {
+        "external_ids": {},
+        "label": "5 Diamond Music Group",
+        "duration_ms": 318691,
+        "score": 100,
+        "play_offset_ms": 227700,
+        "release_date": "2014-08-31",
+        "album": {
+          "name": "The Hyzmen Legacy, Vol. 4"
+        },
+        "external_metadata": {},
+        "acrid": "9ab2a2a76ba4a57cfdd265feded52357",
+        "title": "Repping",
+        "genres": [
+          {
+            "name": "Hip Hop"
+          }
+        ],
+        "result_from": 1,
+        "artists": [
+          {
+            "name": "Nextale Nailze"
+          }
+        ]
+      }
+    ],
+    "timestamp_utc": "2021-05-05 16:17:57"
+  },
+  "cost_time": 3.6229999065399,
+  "result_type": 0
+}
